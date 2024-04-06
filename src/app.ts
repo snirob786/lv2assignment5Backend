@@ -14,9 +14,7 @@ const app: Application = express();
 
 //parsers
 app.use(express.json());
-app.use(
-  cors({ origin: 'https://lv2assignment5.netlify.app/', credentials: true }),
-);
+app.use(cors({ origin: '*', credentials: true }));
 
 // application routes
 app.use('/api/v1', router);
